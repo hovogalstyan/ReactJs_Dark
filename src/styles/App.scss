@@ -1,0 +1,11 @@
+@import "header";
+@import "photos";
+@import "isLoading";
+@import "theme";
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  transition: all 0.8s;
+}

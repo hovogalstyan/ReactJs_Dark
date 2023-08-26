@@ -1,0 +1,26 @@
+.App.active {
+  background: black;
+  .header{
+    background: blue;
+    box-shadow: 0 0 15px 0 #fff;
+    .ThemeButton{
+      background: white;
+      .active_btn{
+        background: black;
+        left: 21px;
+      }
+    }
+  }
+  .photos{
+    background: black;
+    .item{
+      box-shadow: 0 0 8px 0 #ffffff;
+      background: white;
+       .content-text{
+         h3{
+           color: black;
+         }
+       }
+    }
+  }
+}

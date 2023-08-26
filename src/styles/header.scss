@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  padding: 1.5rem 4rem;
+  background: white;
+  box-shadow: 0 0 15px 0 #000000;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  .ThemeButton {
+    width: 40px;
+    height: 20px;
+    background: black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.8s;
+    position: relative;
+
+    .active_btn {
+      width: 18px;
+      height: 18px;
+      background: white;
+      position: absolute;
+      left: 2px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      border-radius: 50%;
+      transition: all 0.5s;
+    }
+  }
+
+}

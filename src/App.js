@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {createContext, useMemo, useState} from "react";
+import Header from "./components/header/Header";
+import Photos from "./components/Photos/Photos";
+
+export const ThemeCreteContext = createContext(null)
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [theme, setTheme] = useState(false);
+    const activeClassApp = useMemo(() => {
+        return theme ? 'active' : ''
+    }, [theme])
+    return (
+        <div className={`App ${activeClassApp}`}>
+            <ThemeCreteContext.Provider value={{
+                theme,
+                setTheme
+            }}>
+                <Header/>
+                <Photos/>
+            </ThemeCreteContext.Provider>
+        </div>
+    );
 }
 
 export default App;
